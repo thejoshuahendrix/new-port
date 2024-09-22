@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/Navbar.css"; // Assuming you're using a separate CSS file
 
