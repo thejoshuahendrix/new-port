@@ -1,0 +1,68 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #121212; /* Dark background */
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+}
+
+/* Gradient Text */
+.hero h1 span {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero h1 span {
+  background-size: 200% 200%;
+  animation: gradientAnimation 1s ease infinite;
+}
+
+/* Heading Style */
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph Style */
+.hero p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+.cta-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #e52e71;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ff8a00;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    font-size: 4rem;
+  }
+  100% {
+    background-position: 100% 50%;
+    font-size: 4.2rem;
+  }
+}

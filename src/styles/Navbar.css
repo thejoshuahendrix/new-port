@@ -1,0 +1,151 @@
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #1d1c1c;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 50px; /* Increased width */
+  height: 50px; /* Increased height */
+}
+
+.hamburger {
+top: 24px;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.open {
+  background-color: transparent;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links:hover {
+  color: #e52e71;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 2rem;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-menu ul li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.mobile-menu ul li a:hover {
+  color: #e52e71;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    background-color: #121212;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+}
